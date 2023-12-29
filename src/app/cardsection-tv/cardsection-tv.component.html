@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="section-title text-center">
+        <h2>TV COLLECTION</h2>
+        <p> </p>
+      </div>
+    </div>
+<div class="movies">
+  <a href="" alt="" target="_blank" *ngFor="let movie of movies">
+      <div class="card">
+        <div class="wrapper">
+          <img [src]="'https://image.tmdb.org/t/p/w500'+ movie.poster_path" class="cover-image" />
+        </div>
+        <img [src]="'https://image.tmdb.org/t/p/w500'+ movie.backdrop_path" class="character" />
+      </div>
+    </a>
+    <a>
+      <div class="card">
+          <div id="container">
+              <button class="learn-more">
+                <span class="circle" aria-hidden="true">
+                  <span class="icon arrow"></span>
+                </span>
+                <a class="button-text" [routerLink]="['/app/alltvs']">See More</a>
+              </button>
+            </div>
+      </div>
+    </a>
+</div>

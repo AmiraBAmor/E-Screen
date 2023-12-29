@@ -1,0 +1,39 @@
+<!-- Site footer -->
+<footer class="site-footer" *ngIf="canShow()">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">Welcome to <i>E-Screen </i>, the ultimate online destination for movie enthusiasts and families alike! we've redefined the movie-watching experience by combining the joy of cinematic exploration with the convenience of finding exactly where to watch your favorite films. Our platform boasts a vast collection of movies and TV shows suitable for all ages, including a special section curated just for kids.it's your personalized ticket to the best in family-friendly entertainment. Happy watching!</p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a [routerLink]="['/app/kids']">Kids</a></li>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
+       <a href="#">E-Screen</a>.
+          </p>
+        </div>
+ 
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>  
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>

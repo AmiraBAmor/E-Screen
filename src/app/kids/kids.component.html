@@ -1,0 +1,38 @@
+
+  
+
+<div class="overlay">
+     
+      <div class="nav">
+        <a class="site-logo" href="index.html">
+          <img src="../../assets/img/logo (2).png" alt="">
+      </a>
+        <button class="custom-btn btn-7" [routerLink]="['/app/login']">GO BACK</button>
+      </div>
+    <div class="row" >
+      <div class="col-md-12" id="image" >
+        <div class="section-title text-center">
+          <div class="page-wrapper">
+            <div class="banner"> 
+            </div>
+        </div>
+      </div>
+      <div #scrollingContainer infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="50" (scrolled)="onScroll()" class="movies"  [routerLink]="['/app/moviedetails']">
+        <a *ngFor="let movie of movieService.movies">
+          <div class="card">
+            <div class="rating-circle one half">
+              <div class="rc-pie rc-spinner"></div>
+              <div class="rc-pie rc-filler"></div>
+              <div class="rc-mask"></div>
+              <div class="rc-count"></div>
+            </div>
+            <div class="wrapper">
+              <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" class="cover-image" />
+            </div>
+            <img [src]="'https://image.tmdb.org/t/p/w500' + movie.backdrop_path" class="character" />
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

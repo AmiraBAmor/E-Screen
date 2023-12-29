@@ -1,0 +1,19 @@
+<c-carousel-indicators></c-carousel-indicators>
+<c-carousel class="overlay">
+    <c-carousel-inner>
+      <c-carousel-item *ngFor="let slide of slides">
+        <img
+          class="d-block w-100"
+          loading="lazy"
+          src="{{slide.src}}"
+        />
+      </c-carousel-item>
+    </c-carousel-inner>
+    <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+    <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+    
+</c-carousel> 
+<app-cardsections></app-cardsections>
+<app-cardsection-tv></app-cardsection-tv>
+<app-cardsectonperson></app-cardsectonperson>
+<app-newsticker></app-newsticker>

@@ -1,0 +1,28 @@
+<!-- Header section -->
+<header class="header-section" *ngIf="canShow()">
+    <div class="container">
+        <!-- logo -->
+        <a class="site-logo" href="index.html">
+            <img src="../../assets/img/logo (2).png" alt="">
+        </a>
+        <div class="user-panel" [routerLink]="['app/login']">
+            <a >Login</a> <a>/Register</a>
+        </div>
+        <!-- responsive -->
+        <div class="nav-switch">
+            <i class="fa fa-bars"></i>
+        </div>
+        <!-- site menu -->
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="button-text" [routerLink]="['/app/kids']">kids</a></li>
+                <li><a class="button-text" [routerLink]="['/app/watchlist']">WatchList</a></li>
+                <li><a class="button-text" [routerLink]="['/app/favorites']">Favorite</a></li>
+                <li><a class="button-text" [routerLink]="['/home']">About us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- Header section end -->
+

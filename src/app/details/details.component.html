@@ -1,0 +1,163 @@
+<div id="conteneur-home" [style.backgroundImage]="'url(https://image.tmdb.org/t/p/w500' + movieService.movieDetails.backdrop_path + ')'">
+    <div class="circle"[style.backgroundImage]= "'url(https://image.tmdb.org/t/p/w500' + movieService.movieDetails.poster_path + ')'"></div>    
+    <div class="home" *ngIf="credits">
+        <h1 id="titre">
+            {{movieService.movieDetails.title}}
+        </h1>
+        <h1 id="tagline">
+            {{movieService.movieDetails.tagline}}
+          </h1>
+          <h2>
+           DATE : {{ movieService.movieDetails.release_date}}
+          </h2>
+          <h3>
+            Popularity : {{ movieService.movieDetails.popularity }}
+          </h3>
+         <h4><i class= "fas fa-star"></i> Rating :  {{ movieService.movieDetails.vote_average }} <br><br>
+          <i class="fa-regular fa-heart" *ngIf="!favorite" (click)="addToFavorites(movieService.movieDetails.id,true)"></i>
+          <i class="fa-solid fa-heart"  id="heart" *ngIf="favorite" (click)="addToFavorites(movieService.movieDetails.id,false)"></i>
+          <i class="fa-solid fa-list-check"  *ngIf="isinwatch" (click)="addwachlist(movieService.movieDetails.id,false)" id="list"></i>
+          <i class="fa-solid fa-circle-plus" *ngIf="!isinwatch"  (click)="addwachlist(movieService.movieDetails.id,true)" ></i>  
+        </h4>
+
+         
+
+         <div class="title" style="opacity: 0;">Add To favorite</div>
+         <div class="heart-wrapper">
+           
+
+          <!-- <h4 *ngFor="let castMember of credits.cast">Director : {{ movieService.movieDetails.writer }} </h4> <h4 *ngFor="let castMember of credits.cast">Writer : {{ movieService.movieDetails.popularity }}</h4> -->
+        </div>
+      </div>
+      <div id="conteneur-about">
+        <div class="about">
+            <div class="profil-video">
+                <iframe
+                  [src]="getSafeVideoUrl()"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>     
+          <div class="profil-text">
+            <h2>Overview</h2>
+            <p>{{ movieService.movieDetails.overview }}</p>
+            <a > Rate it!</a>
+          </div>
+          <div class="clear">
+          </div>
+        </div>
+      </div>
+      <div id="conteneur-skills">
+        <div class="skills">
+          <div class="title">
+            <h2>Cast</h2>
+             <div *ngIf="credits" class="cast">
+              <ng-container *ngFor="let cast of credits.cast">
+                <img *ngIf="cast.profile_path" [src]="'https://image.tmdb.org/t/p/w500'+cast.profile_path">
+              </ng-container>
+             </div>
+          </div>
+        </div>
+        <!--<div class="bardiv">
+            <h3>HTML</h3>
+            <div class="progressbar">
+              <span class="html"></span>
+            </div>
+            <h3>CSS</h3>
+            <div class="progressbar">
+              <span class="css"></span>
+            </div>
+            <h3>JavaScript</h3>
+            <div class="progressbar">
+              <span class="javascript"></span>
+            </div>
+            <h3>PHP</h3>
+            <div class="progressbar">
+              <span class="php"></span>
+            </div>
+            <h3>SQL</h3>
+            <div class="progressbar">
+              <span class="sql"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="conteneur-qualification">
+         <div class="qualification">
+            <h2>Qualification</h2>
+            <div class="lastqualification">
+              <h3>Professional License Media - Internet - Webmaster</h3>
+              <h4>2017 - 2018</h4>
+            </div>
+            <div class="othqualification">
+              <h3>Technology University Degree Multimedia and Internet Jobs</h3>
+              <h4>2015 - 2017</h4>
+            </div>
+           <div class="othqualification">
+              <h3>Scientific Baccalaureate</h3>
+              <h4>2011 - 2015</h4>
+           </div>
+        </div>
+      </div>
+      <div id="conteneur-portfolio">
+        <div class="portfolio">
+          <h2>Portfolio</h2>
+          <div class="conteneur-miniature-left">
+            <div class="miniature-portfolio oneport">
+            </div>
+            <div class="text-miniature">
+              <h3>
+                Type : Video, Picture, ...
+              </h3>
+              <h4>
+                Title here
+              </h4>
+              <h5>
+                Duration : 10 secondes
+              </h5>
+            </div>
+				</div>
+        <div class="conteneur-miniature-right">
+            <div class="miniature-portfolio twoport">
+            </div>
+            <div class="text-miniature">
+              <h3>
+                Type : Video, Picture, ...
+              </h3>
+              <h4>
+                Title
+              </h4>
+              <h5>
+                Duration : 10 secondes
+              </h5>
+            </div>
+				</div>
+        <div class="clear"></div>
+			</div>
+        </div>
+      <div id="conteneur-contact">
+        <div class="contact">
+          <h2>CONTACT</h2>
+          <form name="formulaire" method="POST" action="">
+            <div class="input">
+              <h3>*Name</h3>
+              <input type="text" name="nom" />
+            </div>
+            <div class="input">
+              <h3>*Email</h3>
+              <input type="email" name="email" />
+            </div>
+            <div class="input">
+              <h3>*Object</h3>
+              <input type="text" name="nom" />
+            </div>
+            <div class="input">
+              <h3>*Message</h3>
+              <textarea name="message"></textarea>
+            </div>
+            <div class="input">
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+        </div> -->
+    </div>

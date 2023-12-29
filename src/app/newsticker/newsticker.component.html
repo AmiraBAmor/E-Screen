@@ -1,0 +1,13 @@
+<div class="latest-news-section">
+  <div class="ln-title">Playing Movies</div>
+  <div class="news-ticker" [@tickerAnimation]="newsItems.length">
+    <div class="news-ticker-contant">
+      <div class="nt-item" >
+        <div class="movie-list" *ngFor="let item of newsItems">
+          <div *ngFor="let movie of nowPlayingMovies" class="movie-item">
+            {{ movie.title }}
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

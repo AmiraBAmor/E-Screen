@@ -1,0 +1,56 @@
+<!-- Overlay for fixed sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-default open" role="navigation">
+    <!-- Sidebar navigation -->
+    <ul class="nav sidebar-nav">
+      <li class="select-spacing">
+        <select id="genre" [(ngModel)]="selectedGenre" (change)="onGenreChange()">
+            <option value="0">Select Genre</option>
+            <option value="28">Action</option>
+            <option value="12">Adventure</option>
+            <option value="16">Animation</option>
+            <option value="35">Comedy</option>
+            <option value="80">Crime</option>
+            <option value="99">Documentary</option>
+            <option value="18">Drama</option>
+            <option value="10751">Family</option>
+            <option value="14">Fantasy</option>
+            <option value="36">History</option>
+            <option value="27">Horror</option>
+            <option value="10402">Music</option>
+            <option value="9648">Mystery</option>
+            <option value="10749">Romance</option>
+            <option value="878">Science Fiction</option>
+            <option value="53">Thriller</option>
+            <option value="10752">War</option>
+          </select>          
+        </li>
+
+          <li class="select-spacing">
+          <select id="langue" (change)="onLanguageChange($event)" [(ngModel)]="selectedLanguage">
+            <option value="0">Select Language</option>
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="ar">Arabic</option>
+            <option value="es">Spanish</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="pt">Portuguese</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">Korean</option>
+            <option value="zh">Chinese</option>
+          </select>
+          </li>
+
+          <div class="form-group">
+          <label for="start">Start date </label>
+          <input type="date" id="start" [(ngModel)]="movieService.startDate">
+          <label for="end">End date </label>
+          <input type="date" id="end" [(ngModel)]="movieService.endDate">
+        </div>
+
+        <Button id="bt">Rating </Button>
+    </ul>
+</aside>
